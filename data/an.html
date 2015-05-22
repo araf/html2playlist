@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+
+<body>
+    <div ng-controller="MyController" id="k">
+        Hello {{greetMe}}!
+    </div>
+
+    <script src="angular.min.js"></script>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('MyController', function ($scope) {
+            $scope.greetMe = 'World';
+        });
+
+        d = document.getElementById("k");
+
+        angular.element(k).ready(function () {
+            angular.bootstrap(k, ['myApp']);
+        });
+    </script>
+</body>
+
+</html>

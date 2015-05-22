@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container" ng-controller="lvctrl">
+        <h1>Html2Playlist Settings</h1>
+        <h3>Formats For Playlist:</h3>
+        <dl class="dl-horizontal">
+            <dt>Audios</dt>
+            <dd ng-model="user.audios"> <code ng-repeat="x in user.audios"> {{ x }} </code>
+                <button class="btn btn-xs btn-primary" ng-click="adext('audios')">Add</button>
+            </dd>
+            <dt>Videos</dt>
+            <dd ng-model="user.videos"><code ng-repeat="x in user.videos"> {{ x }} </code>
+                <button class="btn btn-xs btn-primary" ng-click="adext('videos')">Add</button>
+
+            </dd>
+            <dt>Custom 1</dt>
+            <dd ng-model="user.customs"><code ng-repeat="x in user.customs"> {{ x }} </code>
+                <button class="btn btn-xs btn-primary" ng-click="adext('customs')">Add</button>
+            </dd>
+        </dl>
+
+
+        <h3>Directory to save playlist:</h3>
+        <code id="dir"></code>
+        <button class="btn btn-xs btn-primary" ng-click="changeDir()">Change</button>
+
+        <h3>File name:</h3>
+        <label class="radio-inline">
+            <input type="radio" name="optradio">From Url</label>
+        <label class="radio-inline">
+            <input type="radio" name="optradio">From Title</label>
+        <label class="radio-inline">
+            <input type="radio" name="optradio">Directory Name</label>
+
+
+        <br/>
+
+        <button class="btn sm btn-success" ng-click="sendSms()">Save Settings</button>
+        <br/>
+        <br/> {{user}}
+    </div>
+
+</body>
+
+</html>

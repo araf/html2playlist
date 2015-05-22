@@ -1,0 +1,9 @@
+{
+    "name": "html2playlist",
+    "title": "Html2Playlist",
+    "id": "jid1-GnZ5H2licSWbUA",
+    "description": "It collects media links from any webpage and gather them into a single playlist. You can watch/listen it anytime afterwards if you have internet connection.",
+    "author": "Araf",
+    "license": "MPL 2.0",
+    "version": "0.1"
+}
